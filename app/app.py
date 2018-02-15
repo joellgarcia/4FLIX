@@ -23,11 +23,12 @@ def filme_geral():
     dic = {'filmes': []}
 
     for f in filmes:
+        time.sleep (1)
         f['id'] = str(f['_id'])
         f.pop('_id', None)
         if 'comentarios' in f.keys():
             f['comentarios'] = [str(i) for i in f['comentarios']]
-            time.sleep (1)
+           
         dic['filmes'].append(f)
     
     return jsonify(dic)
