@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ALIFLIX</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="user">
+		<div class="user-img"></div>
+		<div class="user-body">
+			<div class="recommended">
+				<div class="title">Recomendados:</div>
+				<ul class="recommended-content">
+				</ul>
+			</div>
+			<div class="recents">
+				<div class="title">Recentes:</div>
+				<ul class="recents-content">
+				</ul>
+			</div>
+		</div>
+	</div>
+	<section class="jumbotron">
+		<div class="container-fluid">
+			<div class="row ">
+				<div class="col-sm-6 col-md-7 movie-img">
+					<div class="movie-bg" style="background-image: url(img/ghost-in-the-shell.jpg)">
+						<img src="img/ghost-in-the-shell.jpg" alt="">
+					</div>
+					<div class="filtering">
+						<div class="clean-filter">Limpar filtros</div>
+						<div class="filter-movies">Filtrar filmes</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-5 movie-info">
+					<p class="movie-title"></p>
+					<p class="movie-label">
+						<b>Nota: </b><span class="movie-note"></span>
+					</p>
+					<p class="movie-label">
+						<b>Categoria: </b><span class="movie-categorie"></span>
+					</p>
+					<p class="movie-label">
+						<b>Diretor: </b><span class="movie-director"></span>
+					</p>
+					<p class="movie-label">
+						<b>Descrição: </b>
+						<span class="movie-description"></span>
+					</p>
+					<p class="movie-label">
+						<b>Atores: </b><span class="movie-actors"></span>
+					</p>
+					<div class="movie-actions">
+						<button class="btn btn-primary">Assistir</button>
+						<button class="btn btn-info" data-toggle="modal" data-target=".modal" data-type="comment">Comentários</button>
+						<button class="btn btn-success" data-toggle="modal" data-target=".modal" data-type="note">Adicionar nota</button>
+						<button class="btn btn-danger">Excluir filme</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="movies"></section>
+	
+	<div class="message"></div>
+	
+	<div class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Avaliar filme</h4>
+				</div>
+				<div class="modal-body"></div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-primary">Enviar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/slick.js"></script>
+	<script src="js/main.js"></script>
+	</body>
+</html>

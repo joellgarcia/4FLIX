@@ -1,0 +1,182 @@
+/* @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700"); */
+body {
+  font-family: "Source Sans Pro"; }
+
+.jumbotron {
+  padding: 0;
+  margin: 0;
+  background-color: #222; }
+  .jumbotron .container-fluid {
+    padding: 0; }
+  .jumbotron .row {
+    margin: 0; }
+  .jumbotron [class*="col-"] {
+    padding: 0; }
+  .jumbotron .movie-info {
+    z-index: 1;
+    font-weight: 400;
+    padding: 24px;
+    color: #bbb;
+    box-shadow: 0 0 15px 0 #000;
+    overflow-y: scroll; }
+  .jumbotron .movie-title {
+    margin-bottom: 0;
+    font-weight: 300;
+    font-size: 48px;
+    color: #00aab0; }
+  .jumbotron .movie-label {
+    font-weight: 400;
+    font-size: 18px; }
+    .jumbotron .movie-label b {
+      margin-right: 5px; }
+  .jumbotron .movie-description {
+    font-size: 16px; }
+  .jumbotron .movie-img {
+    position: relative;
+    float: right; }
+  .jumbotron .movie-bg {
+    height: 100%;
+    background: #222 no-repeat scroll center/cover; }
+    .jumbotron .movie-bg img {
+      display: none; }
+  .jumbotron .filtering {
+    position: absolute;
+    z-index: 4;
+    right: 10px;
+    bottom: 10px; }
+  .jumbotron .clean-filter {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #333;
+    border: 2px solid #00aab0;
+    border-radius: 40px;
+    font-weight: 700;
+    color: #00aab0;
+    cursor: pointer; }
+  .jumbotron .filter-movies {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #00aab0;
+    border: 2px solid #333;
+    border-radius: 40px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer; }
+
+.movies {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 10px;
+  background: #00aab0; }
+  .movies .thumbnail {
+    margin-bottom: 10px;
+    border-width: 2px; }
+    .movies .thumbnail img {
+      max-height: 70px; }
+    .movies .thumbnail .caption {
+      padding: 9px 0 0;
+      font-size: 12px; }
+      .movies .thumbnail .caption p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden; }
+  .movies .slide {
+    padding: 0 10px; }
+    .movies .slide p:only-child {
+      margin-bottom: 0; }
+
+.slick-slide {
+  cursor: pointer; }
+  .slick-slide.selected .thumbnail {
+    border: 2px solid #222; }
+  .slick-slide.add-movie .thumbnail {
+    background-color: transparent;
+    padding: 20px; }
+    .slick-slide.add-movie .thumbnail img {
+      width: 40px; }
+
+.slick-dots {
+  margin: 0;
+  list-style: none;
+  text-align: center; }
+  .slick-dots li {
+    display: inline-block;
+    margin: 0 10px; }
+  .slick-dots button {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 2px solid #222;
+    border-radius: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    text-indent: -99999px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+  .slick-dots .slick-active button {
+    background-color: #222; }
+
+.message {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  max-width: 100%;
+  padding: 10px; }
+
+.user {
+  position: fixed;
+  z-index: 3;
+  top: 10px;
+  right: 10px; }
+  .user .user-img {
+    position: absolute;
+    top: 0;
+    right: -2px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: url(../img/user.png) no-repeat scroll center/cover #333;
+    cursor: pointer; }
+  .user .user-body {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin-top: 20px;
+    border-radius: 4px;
+    background-color: #333;
+    transition: all 0.5s;
+    overflow: hidden; }
+    .user .user-body .title {
+      font-weight: 700;
+      color: #fff; }
+    .user .user-body ul {
+      padding: 0; }
+    .user .user-body li {
+      padding-left: 10px;
+      list-style: none;
+      color: #fff; }
+  .user.open .user-body {
+    width: 200px;
+    height: 300px;
+    padding: 10px; }
+
+@media screen and (max-width: 768px) {
+  .jumbotron .movie-info {
+    overflow: visible; }
+  .jumbotron .movie-img {
+    float: none; }
+    .jumbotron .movie-img .movie-bg {
+      background-image: none !important; }
+    .jumbotron .movie-img img {
+      width: 100%;
+      display: block; } }
+
+/*# sourceMappingURL=main.css.map */

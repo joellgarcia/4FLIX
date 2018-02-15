@@ -6,6 +6,7 @@ from pymongo import MongoClient
 import pymongo 
 from bson.objectid import ObjectId
 import json
+import time
 import urllib3.request
 import datetime
 
@@ -27,7 +28,7 @@ def filme_geral():
         if 'comentarios' in f.keys():
             f['comentarios'] = [str(i) for i in f['comentarios']]
         dic['filmes'].append(f)
-
+    time.sleep (6)
     return jsonify(dic)
 
 

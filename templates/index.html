@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ALIFLIX</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css" integrity="sha256-2RdmDD1veq0y68SwASxtC7hKE+IBoBLjNLzKS59Ghsk=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+	<section class="jumbotron">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 col-md-7 movie-img">
+					<div class="movie-bg" style="background-image: url(/static/img/ghost-in-the-shell.jpg)">
+						<img src="/static/img/ghost-in-the-shell.jpg" alt="">
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-5 movie-info">
+					<p class="movie-title">{{info.titulo}}</p>
+					<p class="movie-label">
+						<b>Diretor: </b><span>Rupert Sanders</span>
+						- <span class="movie-note">nota</span>
+					</p>
+					<p class="movie-label">
+						<b>Descrição: </b>
+						<span>Em um mundo pós-2029, é bastante comum o aperfeiçoamento do corpo humano a partir de inserções tecnológicas. O ápice desta evolução é a Major Mira Killian (Scarlett Johansson), que teve seu cérebro transplantado para um corpo inteiramente construído pela Hanka Corporation. Considerada o futuro da empresa, Major logo é inserida no Section 9, um departamento da polícia local. Lá ela passa a combater o crime, sob o comando de Aramaki (Takeshi Kitano) e tendo Batou (Pilou Asbaek) como parceiro. Só que, em meio à investigação sobre o assassinato de executivos da Hanka, ela começa a perceber certas falhas em sua programação que a fazem ter vislumbres do passado quando era inteiramente humana.</span>
+					</p>
+					<p class="movie-label">
+						<b>Atores: </b><span>Ficção</span>
+					</p>
+					<div class="movie-actions">
+						<a href="/filme/assistir/"><button class="btn btn-primary">Assistir</button></a>
+						<a href="/filme/add_nota/"><button class="btn btn-info">Comentários</button></a>
+						<a href="/filme/coments/"><button class="btn btn-success">Adicionar nota</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="movies">
+		{% for filme in filmes %}
+		<a href="#" class="slide">
+			<div class="thumbnail">
+				<img src="/static/img/ghost-in-the-shell.jpg" alt="Ghost in the Shell">
+				<div class="caption">
+					<p>{{filme.titulo}}</p>
+				</div>
+			</div>
+		</a>
+		{% endfor %}
+	</section>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js" integrity="sha256-Qw84Sw/EltllDHR8ykWKfq4GJTDHGKp6iW2ZAx+7ro0=" crossorigin="anonymous"></script>
+	<script src="/static/js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,13 @@
+FROM python:2-stretch
+
+WORKDIR /usr/src/app
+COPY Requirements.txt ./
+RUN apt-get update
+RUN apt-get install apt-utils -y
+RUN apt-get install python-gobject python-gobject-dev libgirepository1.0-dev  build-essential linux-headers-amd64 python-dev libevent-dev libxslt-dev libssl-dev openssl -y
+RUN gcc -v
+RUN pip install --no-cache-dir -r Requirements.txt
+
+COPY app.py ./
+
+CMD [ "python", "./app.py" ]
