@@ -27,8 +27,9 @@ def filme_geral():
         f.pop('_id', None)
         if 'comentarios' in f.keys():
             f['comentarios'] = [str(i) for i in f['comentarios']]
+            time.sleep (1)
         dic['filmes'].append(f)
-    time.sleep (6)
+    
     return jsonify(dic)
 
 
@@ -123,7 +124,7 @@ def ver_recentes():
     filmes = db.filmes.find({}, 
         {"titulo":1, "visto":1, "_id":0}
     ).sort([('visto', pymongo.DESCENDING)]).limit(4)
-
+    
     dic = {'filmes': [f for f in filmes]}
     return jsonify(dic)
 
@@ -135,7 +136,7 @@ def ver_recomendados():
     ).sort([('avaliacao.bom', pymongo.DESCENDING)]).limit(4)
 
     dic = {'filmes': [f for f in filmes]}
-
+    time.sleep (3)
     print dic
     return jsonify(dic)
 
