@@ -23,7 +23,7 @@ def filme_geral():
     dic = {'filmes': []}
 
     for f in filmes:
-        time.sleep(0.100)
+        time.sleep(0.010)
         f['id'] = str(f['_id'])
         f.pop('_id', None)
         if 'comentarios' in f.keys():
