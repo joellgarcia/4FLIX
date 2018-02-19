@@ -27,7 +27,9 @@ Instale os plugins recomendados pelo jenkins e configure o acesso
 
 Após logar no Jenkins iremos copiar o arquivo config.xml para o diretorio /var/jenkins_home/jobs/Aliflix/
 
+```
 docker cp jenkins/config.xml jenkins:/var/jenkins_home/jobs/Aliflix/
+```
 
 Iremos parar e iniciar o container para carregar o job
 
