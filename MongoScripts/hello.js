@@ -1,4 +1,4 @@
-c = new Mongo();
+c = new Mongo($ip_db);
 db = c.getDB("dexter");
 //db.funcionarios.insert({"nome":"fulano"});
 funcs = db.funcionarios.find();

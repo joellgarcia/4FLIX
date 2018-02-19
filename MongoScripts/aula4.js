@@ -1,4 +1,4 @@
-c = new Mongo();
+c = new Mongo($ip_db);
 db = c.getDB("dexter");
 
 var filmes = db.filmes.initializeUnorderedBulkOp();
