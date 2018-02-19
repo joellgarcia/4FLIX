@@ -1,3 +1,4 @@
+var ip_db   = process.env.ip_db;
 c = new Mongo($ip_db);
 db = c.getDB("dexter");
 
