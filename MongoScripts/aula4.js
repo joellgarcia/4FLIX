@@ -1,5 +1,4 @@
-var ip_db   = process.env.NODE_ENV;
-c = new Mongo()
+c = new Mongo(ip)
 db = c.getDB("dexter");
 
 var filmes = db.filmes.initializeUnorderedBulkOp();
