@@ -4,7 +4,7 @@ bcrypt==3.1.4
 blessings==1.6
 bpython==0.16
 cffi==1.11.2
-chardet
+chardet==2.2.1
 click==6.7
 cryptography==1.7.1
 curtsies==0.2.11
