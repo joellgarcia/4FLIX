@@ -6,6 +6,6 @@ COPY Requirements.txt /srv/
 RUN cd /srv/ && pip install -r Requirements.txt
 RUN yum remove gcc kernel-devel gcc-c++ -y
 RUN yum clean all
-RUN rm -rf /var/cache/yum
+# RUN rm -rf /var/cache/yum
 COPY app.py /srv/
 CMD ["python", "/srv/app.py"]
