@@ -20,4 +20,4 @@ sudo docker run --log-driver=gelf --log-opt gelf-address=udp://192.168.99.11:122
 sleep 10
 ip_app=$(sudo docker inspect app | grep -w "IPAddress" | awk '{ print $2 }' | head -n 1 | cut -d "," -f1 | sed -e 's/\"//g' )
 sed -i -E 's/(stringProp name="HTTPSampler.domain">)([a-zA-Z0-9"-])+/\1'"$ip_app"'/g' jenkins/aliflix.jmx
-sudo /root/apache-jmeter-5.1/bin/jmeter -n -t jenkins/aliflix.jmx -l aliflix.jtl
+sudo /root/apache-jmeter-5.2/bin/jmeter -n -t jenkins/aliflix.jmx -l aliflix.jtl
