@@ -1,4 +1,4 @@
-cd app
+cd backend
 sudo docker build -t aliflix-python .
 cd ..
 cd frontend
