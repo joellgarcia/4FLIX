@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:bionic 
 RUN apt-get update && apt-get install -y apache2 && apt-get -y clean
 ADD frontend.tar.gz /var/www/html/
 ADD mod_status /tmp/
